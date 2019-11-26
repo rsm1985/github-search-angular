@@ -1,0 +1,30 @@
+<div class="header">
+  <div class="wrapper">
+    <div class="header-wrapper">
+      <div class="logo">
+        <div class="logo-wrapper">
+          <img src="../assets/images/logo.png" alt="Logo">
+        </div>
+        <div class="logo-text">
+          <div class="logo-text__title">GitHub</div>
+          <div class="logo-text__subtitle">search</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a routerLink="/search" routerLinkActive="active" class="nav__link">Search</a>
+        <a routerLink="/list" routerLinkActive="active" class="nav__link">My list</a>
+      </nav>
+    </div>
+    
+    
+  </div>
+</div>
+<div class="github-app">
+  <div class="wrapper">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="bottom">
+    <span class="bottom__copyright">Copyright &copy; 2019</span>
+    
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="result">
+  <div class="result-wrapper">
+  <a href="{{repository.link}}" class="result__title">{{ repository.title }}</a>
+  <p class="result__description">{{ repository.description }}</p>
+  <div class="result__keywords">
+    <div *ngFor="let item of repository.keywords" class="result__key">{{item}}</div>
+  </div>
+  <button class="btn {{ repository.addedToList }}" (click)="toggleRepository(this.repository)" >{{!repository.addedToList ? 'Add to list' : 'Remove from list'}}</button>
+  </div>
+  <p class="result__stars"><img class="result__star-img" src="../../assets/images/star.svg" alt=""> <span class="result__total-stars">{{ repository.stars }}</span></p>
+  
+</div>

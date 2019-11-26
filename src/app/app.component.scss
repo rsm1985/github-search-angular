@@ -1,0 +1,84 @@
+.github-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100vh - 60px);
+  .wrapper {
+    flex: 1 0 auto;
+  }
+}
+.bottom {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: #3C4146;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+  .header {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background-color: #3C4146;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-wrapper {
+  margin-right: 15px;
+  max-width: 40px;
+}
+
+.logo {
+  display: flex;
+  width: 100%;
+}
+
+.logo-text {
+  font-family: Arial, sans-serif;
+  &__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFF;
+  }
+  &__subtitle {
+    font-size: 14px;
+    line-height: 16px;
+    color: #B3BCC7;
+  }
+}
+.nav {
+  display: flex;
+  align-items: center;
+  &__link {
+    margin-left: 20px;
+    font-family: Arial, sans-serif;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #E0E0E0;
+  }
+  &__link.active {
+    font-weight: bold;
+    color: #fff;
+  }
+}
+
+.btn {
+  width: 130px;
+  height: 45px;
+  background-color: #0366D6;
+  font-size: 15px;
+  text-transform: uppercase;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+  color: #fff;
+
+  &.true {
+    background-color: #EB5757;
+  }
+}

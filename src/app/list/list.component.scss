@@ -1,0 +1,14 @@
+h1 {
+  font-family: Arial, sans-serif;
+}
+.search-results.grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 850px;
+  .result {
+    width: 410px;
+    height: 100%;
+  }
+}

@@ -1,0 +1,7 @@
+<h1>My list</h1>
+<app-panel *ngIf="listService.list.length"></app-panel>
+
+<div class="search-results" [ngClass]="panelService.showType">
+  <app-repository *ngFor="let item of listService.list" [repository]="item"
+                  class="result"  ></app-repository>
+</div>

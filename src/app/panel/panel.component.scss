@@ -1,0 +1,49 @@
+.panel {
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 0;
+
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 32px;
+    cursor: pointer;
+
+  }
+  &__grid-element {
+    margin-bottom: 2px;
+    width: 15px;
+    height: 15px;
+    background-color: #E0E0E0;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 12px;
+    height: 32px;
+    cursor: pointer;
+  }
+  &__list-element {
+    width: 32px;
+    height: 3px;
+    background-color: #E0E0E0;
+  }
+
+
+
+  &.list &__list {
+    pointer-events: none;
+  }
+  &.list &__list-element {
+    background-color: #000;
+  }
+  &.grid &__grid {
+    pointer-events: none;
+  }
+  &.grid &__grid-element {
+    background-color: #000;
+  }
+
+}

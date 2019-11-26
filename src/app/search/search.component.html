@@ -1,0 +1,48 @@
+<script src="../app.module.ts"></script>
+<div class="search-form">
+  <div class="select">
+    <select [(ngModel)]="searchType">
+      <option value="Repositories" selected>Repositories</option>
+    </select>
+    <span class="select__line"></span>
+  </div>
+  <div class="select">
+    <select [(ngModel)]="searchLang">
+      <option value="Javascript" selected>Javascript</option>
+      <option value="CSS">CSS</option>
+      <option value="HTML">HTML</option>
+      <option value="PHP">PHP</option>
+      <option value="Ruby">Ruby</option>
+      <option value="C++">C++</option>
+      <option value="Python">Python</option>
+      <option value="C#">C#</option>
+      <option value="Java">Java</option>
+      <option value="Go">Go</option>
+      <option value="Haskel">Haskel</option>
+    </select>
+    <span class="select__line"></span>
+  </div>
+  <div class="form-element">
+    <input type="text" class="form-element__input" [(ngModel)]="searchString">
+    <span class="form-element__title" [ngClass]=" searchString.length ? 'top' : '' ">Type here for search</span>
+    <div class="form-element__line"></div>
+  </div>
+  
+  <button class="btn" (click)="dataService.findRepositories(this.searchString, this.searchLang)">Search</button>
+</div>
+<div class="search" *ngIf="!dataService.showNotFound; else showNotFound">
+  <app-panel *ngIf="dataService.repositories.length" ></app-panel>
+  <div class="search-results" [ngClass]="panelService.showType">
+    <app-repository *ngFor="let item of dataService.getRepositories()" [repository]="item"
+                    class="result" ></app-repository>
+  </div>
+</div>
+<ng-template #showNotFound>
+  <div class="not-found">
+    <img class="not-found__logo" src="../../assets/images/github.png" alt="">
+    <p class="not-found__text">
+      <span class="not-found__title">NO RESULTS FOUND</span>
+      <span class="not-found__subtitle">select other parameters and try again</span>
+    </p>
+  </div>
+</ng-template>

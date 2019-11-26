@@ -1,0 +1,13 @@
+<div class="panel" [ngClass]="panelService.showType">
+  <div class="panel__grid" (click)="panelService.toggleGrid('grid')">
+    <div class="panel__grid-element"></div>
+    <div class="panel__grid-element"></div>
+    <div class="panel__grid-element"></div>
+    <div class="panel__grid-element"></div>
+  </div>
+  <div class="panel__list" (click)="panelService.toggleGrid('list')">
+    <div class="panel__list-element"></div>
+    <div class="panel__list-element"></div>
+    <div class="panel__list-element"></div>
+  </div>
+</div>

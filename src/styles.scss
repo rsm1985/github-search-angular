@@ -1,0 +1,24 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1000px;
+  width: 100%;
+}
+.btn {
+  width: 130px;
+  height: 45px;
+  background-color: #0366D6;
+  font-size: 15px;
+  text-transform: uppercase;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  &_red {
+    background-color: #EB5757;
+  }
+}
